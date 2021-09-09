@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Creating React Js Blog",
+      "datetime": "September 09, 2021 4:59:04 PM",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 2,
+      "title": "Deploying React Js Blog App",
+      "datetime": "September 09, 2021 4:59:29 PM",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": 5,
+      "title": "(Most) SaaS Cost Tools Suck ",
+      "datetime": "September 09, 2021 4:54:40 PM",
+      "body": "Periodically I get someone excited to talk to me about their new AWS bill optimization tool. This is the shorthand “cheat sheet” that addresses how I think about these things.\n\nIt looks like you’re building a SaaS tool to manage AWS cost optimization. I don’t think it will work. Here’s why I don’t think it will work:\n\n1. Customers will not put up with it.\n2. Customers care less about the big bill than they do about the fact that it can.\n3. AWS will not put up with it.\n4. Your tool can’t tell the difference between idle EC2 instances and a hot DR site.\n5. Buying Reserved instances or Savings Plans for a cluster that’s getting.\n6. The police will not put up with it.\n\n"
+    }
+  ]
+}
