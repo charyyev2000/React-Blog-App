@@ -11,6 +11,7 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import api from "./api/posts";
+import Login from "./Login";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,31 @@ function App() {
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
   const history = useHistory();
+  // login
+  const adminUser = {
+    email: "example@example.com",
+    password: "example123"
+  };
+  const [user, setUser] = useState({ name: "", email: "" });
+  const [error, setError] = useState("");
+
+  const login = (details) => {
+    if (
+      details.email == adminUser.email &&
+      details.password == adminUser.password
+    ) {
+      setUser({
+        name: details.name,
+        email: details.email
+      });
+      alert(`Welcome ${details.name}`);
+    } else {
+      setError(alert("Details do not match"));
+    }
+  };
+  const Logout = () => {
+    setUser({ name: "", email: "" });
+  };
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -98,38 +124,45 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="Personal Blog" />
-      <Nav search={search} setSearch={setSearch} />
-      <Switch>
-        <Route exact path="/">
-          <Home posts={searchResults} />
-        </Route>
-        <Route exact path="/post">
-          <NewPost
-            handleSubmit={handleSubmit}
-            postTitle={postTitle}
-            setPostTitle={setPostTitle}
-            postBody={postBody}
-            setPostBody={setPostBody}
-          />
-        </Route>
-        <Route path="/edit/:id">
-          <EditPost
-            posts={posts}
-            handleEdit={handleEdit}
-            editTitle={editTitle}
-            setEditTitle={setEditTitle}
-            editBody={editBody}
-            setEditBody={setEditBody}
-          />
-        </Route>
-        <Route path="/post/:id">
-          <PostPage posts={posts} handleDelete={handleDelete} />
-        </Route>
-        <Route path="/about" component={About} />
-        <Route path="*" component={Missing} />
-      </Switch>
-      <Footer />
+      {user.email !== "" ? (
+        <>
+          <Header title="Personal Blog" />
+          <Nav search={search} setSearch={setSearch} Logout={Logout} />
+          <Switch>
+            <Route exact path="/">
+              <Home posts={searchResults} />
+            </Route>
+            <Route exact path="/post">
+              <NewPost
+                handleSubmit={handleSubmit}
+                postTitle={postTitle}
+                setPostTitle={setPostTitle}
+                postBody={postBody}
+                setPostBody={setPostBody}
+              />
+            </Route>
+            <Route path="/edit/:id">
+              <EditPost
+                posts={posts}
+                handleEdit={handleEdit}
+                editTitle={editTitle}
+                setEditTitle={setEditTitle}
+                editBody={editBody}
+                setEditBody={setEditBody}
+              />
+            </Route>
+            <Route path="/post/:id">
+              <PostPage posts={posts} handleDelete={handleDelete} />
+            </Route>
+            <Route path="/about" component={About} />
+            <Route path="*" component={Missing} />
+          </Switch>
+          <Footer />
+          {/* <Login /> */}
+        </>
+      ) : (
+        <Login login={login} error={error} />
+      )}
     </div>
   );
 }

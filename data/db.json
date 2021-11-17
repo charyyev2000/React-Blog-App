@@ -14,9 +14,15 @@
     },
     {
       "id": 5,
-      "title": "(Most) SaaS Cost Tools Suck ",
-      "datetime": "September 09, 2021 4:54:40 PM",
+      "title": "(Most) SaaS Cost Tools Suck .",
+      "datetime": "November 16, 2021 10:12:08 PM",
       "body": "Periodically I get someone excited to talk to me about their new AWS bill optimization tool. This is the shorthand “cheat sheet” that addresses how I think about these things.\n\nIt looks like you’re building a SaaS tool to manage AWS cost optimization. I don’t think it will work. Here’s why I don’t think it will work:\n\n1. Customers will not put up with it.\n2. Customers care less about the big bill than they do about the fact that it can.\n3. AWS will not put up with it.\n4. Your tool can’t tell the difference between idle EC2 instances and a hot DR site.\n5. Buying Reserved instances or Savings Plans for a cluster that’s getting.\n6. The police will not put up with it.\n\n"
+    },
+    {
+      "id": 6,
+      "title": "psot",
+      "datetime": "November 17, 2021 10:06:17 AM",
+      "body": "pst."
     }
   ]
 }
