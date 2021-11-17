@@ -1,4 +1,4 @@
-<h1>Download or clone the repository</h1>
+<p>Download or clone the repository</p>
 
 ### `npm install`
 
