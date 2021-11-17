@@ -1,3 +1,7 @@
+<h1>Download or clone the repository</h1>
+
+### `npm install`
+
 ### `npm start`
 
 open new terminal
